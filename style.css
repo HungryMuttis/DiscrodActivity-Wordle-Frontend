@@ -1,0 +1,110 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121213;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+}
+
+.tile {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #3a3a3c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+/* Tile Colors */
+.tile.grey {
+  background-color: #3a3a3c;
+  border-color: #3a3a3c;
+}
+.tile.yellow {
+  background-color: #b59f3b;
+  border-color: #b59f3b;
+}
+.tile.green {
+  background-color: #538d4e;
+  border-color: #538d4e;
+}
+
+#keyboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.key {
+  font-family: inherit;
+  font-weight: bold;
+  border: 0;
+  padding: 0;
+  height: 58px;
+  cursor: pointer;
+  background-color: #818384;
+  color: #ffffff;
+  border-radius: 4px;
+  text-transform: uppercase;
+  user-select: none;
+  width: 43px;
+  /* Add flex properties to center content (like the SVG) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.key.large {
+  width: 68px; /* Adjusted width for Enter and Backspace icon */
+}
+
+/* Key Colors */
+.key.grey {
+  background-color: #3a3a3c;
+}
+.key.yellow {
+  background-color: #b59f3b;
+}
+.key.green {
+  background-color: #538d4e;
+}
+
+#message-container {
+  min-height: 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
